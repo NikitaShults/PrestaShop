@@ -1,7 +1,6 @@
 package BaseConfiguration;
 
-import com.prestashop.pages.FeedbackPage;
-import com.prestashop.pages.MainPage;
+import com.prestashop.pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +14,9 @@ public class BaseTest {
     private WebDriver driver;
     protected MainPage mainPage;
     protected FeedbackPage feedbackPage;
+    protected LogInPage logInPage;
+    protected CreateAnAccountPage createAnAccountPage;
+    protected MyAccountPage myAccountPage;
 
     @BeforeMethod
     public void setUp() {
@@ -26,12 +28,15 @@ public class BaseTest {
 
         mainPage = new MainPage(driver);
         feedbackPage = new FeedbackPage(driver);
+        logInPage = new LogInPage(driver);
+        createAnAccountPage = new CreateAnAccountPage(driver);
+        myAccountPage = new MyAccountPage(driver);
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

@@ -27,7 +27,7 @@ public class FeedbackPage extends BasePage {
     FakeValuesService fakeValuesService = new FakeValuesService(
             new Locale("en-GB"), new RandomService());
 
-    public WebElement getSendButton(){
+    public WebElement getSendButton() {
         return driver.findElement(sendButton);
     }
 
@@ -35,7 +35,7 @@ public class FeedbackPage extends BasePage {
         return driver.findElement(customerServiceField).getText();
     }
 
-    public String getSuccessfulMessageField(){
+    public String getSuccessfulMessageField() {
         return driver.findElement(successfulMessageField).getText();
     }
 
