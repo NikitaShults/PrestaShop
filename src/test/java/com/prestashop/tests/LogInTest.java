@@ -8,15 +8,13 @@ public class LogInTest extends BaseTest {
 
     @Test
     public void openLogInPage() {
-        mainPage.openMainPage();
-        mainPage.clickLogIn();
+        logInStep.openLogInPage();
         Assert.assertEquals(logInPage.getAuthenticationField(), "AUTHENTICATION");
     }
 
     @Test
     public void createAccount() {
-        mainPage.openMainPage();
-        mainPage.clickLogIn();
+        logInStep.openLogInPage();
         logInPage.setEmail();
         logInPage.clickCreateAccount();
     }

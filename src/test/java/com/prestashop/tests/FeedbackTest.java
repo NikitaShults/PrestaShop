@@ -9,19 +9,14 @@ public class FeedbackTest extends BaseTest {
 
     @Test(retryAnalyzer = Retry.class)
     public void openFeedbackPage() {
-        mainPage.openMainPage();
-        mainPage.clickFeedback();
+        feedbackStep.openFeedbackPage();
         Assert.assertEquals(feedbackPage.getCustomerServiceField(), "CUSTOMER SERVICE - CONTACT US");
     }
 
     @Test(retryAnalyzer = Retry.class)
     public void successfulSendMessage() {
-        mainPage.openMainPage();
-        mainPage.clickFeedback();
-        feedbackPage.choiceSubjectHeadingParameter("2");
-        feedbackPage.setEmail();
-        feedbackPage.setOrderReference();
-        feedbackPage.setMessage();
+        feedbackStep.openFeedbackPage();
+        feedbackStep.fillFieldFeedback();
         feedbackPage.clickSendButton();
         Assert.assertEquals(feedbackPage.getSuccessfulMessageField(), "Your message has been successfully sent to our team.");
     }

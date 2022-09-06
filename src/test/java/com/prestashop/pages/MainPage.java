@@ -14,6 +14,8 @@ public class MainPage extends BasePage {
 
     private By feedbackButton = By.id("contact-link");
     private By logInButton = By.className("login");
+    private By searchField = By.id("search_query_top");
+    private By searchButton = By.cssSelector(".btn.btn-default.button-search");
 
     public WebElement getLogInButton() {
         return driver.findElement(logInButton);
@@ -21,6 +23,10 @@ public class MainPage extends BasePage {
 
     public WebElement getFeedbackButton() {
         return driver.findElement(feedbackButton);
+    }
+
+    public WebElement getSearchButton() {
+        return driver.findElement(searchButton);
     }
 
 
@@ -34,5 +40,13 @@ public class MainPage extends BasePage {
 
     public void clickLogIn() {
         getLogInButton().click();
+    }
+
+    public void setThing(String Thing) {
+        driver.findElement(searchField).sendKeys(Thing);
+    }
+
+    public void clickSearch(){
+        getSearchButton().click();
     }
 }
