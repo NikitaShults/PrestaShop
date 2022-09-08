@@ -12,7 +12,9 @@ public class MyAccountPage extends BasePage {
 
     private By successfulRegistrationField = By.cssSelector(".alert.alert-success");
 
+
     public String getSuccessfulMessage() {
         return driver.findElement(successfulRegistrationField).getText();
     }
+
 }
