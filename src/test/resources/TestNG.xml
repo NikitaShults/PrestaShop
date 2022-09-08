@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="8" name="chrome" parallel="tests">
+    <parameter name="browserType" value="chrome"/>
+    <test name="LogInTest">
+        <classes>
+            <class name="com.prestashop.tests.LogInTest"/>
+        </classes>
+    </test>
+    <test name="CreateAnAccountTest">
+        <classes>
+            <class name="com.prestashop.tests.CreateAnAccountTest"/>
+        </classes>
+    </test>
+    <test name="FeedbackTest">
+        <classes>
+            <class name="com.prestashop.tests.FeedbackTest"/>
+        </classes>
+    </test>
+</suite>
