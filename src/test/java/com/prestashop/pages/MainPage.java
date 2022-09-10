@@ -1,6 +1,6 @@
 package com.prestashop.pages;
 
-import BaseConfiguration.BasePage;
+import base.configuration.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

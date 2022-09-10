@@ -1,6 +1,6 @@
 package com.prestashop.steps;
 
-import BaseConfiguration.BaseStep;
+import base.configuration.BaseStep;
 import com.prestashop.pages.FeedbackPage;
 import com.prestashop.pages.MainPage;
 import io.qameta.allure.Step;

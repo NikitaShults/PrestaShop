@@ -1,6 +1,6 @@
 package com.prestashop.steps;
 
-import BaseConfiguration.BaseStep;
+import base.configuration.BaseStep;
 import com.prestashop.pages.MyAddressPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;

@@ -2,7 +2,6 @@ package com.prestashop;
 
 import lombok.*;
 
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode

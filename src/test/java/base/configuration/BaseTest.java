@@ -1,4 +1,4 @@
-package BaseConfiguration;
+package base.configuration;
 
 import com.prestashop.pages.*;
 import com.prestashop.steps.CreateAnAccountStep;

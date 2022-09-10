@@ -1,6 +1,6 @@
 package com.prestashop.tests;
 
-import BaseConfiguration.BaseTest;
+import base.configuration.BaseTest;
 import com.prestashop.Account;
 import org.testng.Assert;
 import org.testng.annotations.Test;

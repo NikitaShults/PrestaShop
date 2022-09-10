@@ -1,6 +1,6 @@
 package com.prestashop.pages;
 
-import BaseConfiguration.BasePage;
+import base.configuration.BasePage;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
 import lombok.extern.log4j.Log4j2;
@@ -49,20 +49,20 @@ public class FeedbackPage extends BasePage {
     }
 
     public void setEmail() {
-        log.info("Set {} email");
         String email = fakeValuesService.bothify("??????####@mail.ru");
+        log.info("Set {} email", email);
         driver.findElement(emailAddressField).sendKeys(email);
     }
 
     public void setOrderReference() {
-        log.info("Set {} order reference");
         String orderNumber = fakeValuesService.bothify("####");
+        log.info("Set {} order reference", orderNumber);
         driver.findElement(orderReferenceField).sendKeys(orderNumber);
     }
 
     public void setMessage() {
-        log.info("Set {} message");
         String message = fakeValuesService.bothify("??????????");
+        log.info("Set {} message", message);
         driver.findElement(messageField).sendKeys(message);
     }
 

@@ -1,6 +1,6 @@
 package com.prestashop.pages;
 
-import BaseConfiguration.BasePage;
+import base.configuration.BasePage;
 import com.prestashop.wrappers.Dropdown;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;

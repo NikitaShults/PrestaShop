@@ -1,6 +1,6 @@
 package com.prestashop.pages;
 
-import BaseConfiguration.BasePage;
+import base.configuration.BasePage;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
 import org.openqa.selenium.By;
