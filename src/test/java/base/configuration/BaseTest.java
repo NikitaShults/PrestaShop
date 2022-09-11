@@ -1,9 +1,10 @@
-package BaseConfiguration;
+package base.configuration;
 
 import com.prestashop.pages.*;
 import com.prestashop.steps.CreateAnAccountStep;
 import com.prestashop.steps.FeedbackStep;
 import com.prestashop.steps.LogInStep;
+import com.prestashop.steps.MyAddressStep;
 import com.prestashop.utils.TestListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,9 @@ public class BaseTest {
     protected FeedbackStep feedbackStep;
     protected LogInStep logInStep;
     protected CreateAnAccountStep createAnAccountStep;
+    protected MyAddressPage myAddressPage;
+    protected MyAddressStep myAddressStep;
+    protected MyAddressesPage myAddressesPage;
 
     @BeforeMethod
     public void setUp() {
@@ -45,6 +49,9 @@ public class BaseTest {
         feedbackStep = new FeedbackStep(driver);
         logInStep = new LogInStep(driver);
         createAnAccountStep = new CreateAnAccountStep(driver);
+        myAddressPage = new MyAddressPage(driver);
+        myAddressStep = new MyAddressStep(driver);
+        myAddressesPage = new MyAddressesPage(driver);
     }
 
     @AfterMethod(alwaysRun = true)

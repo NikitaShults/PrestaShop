@@ -1,6 +1,7 @@
 package com.prestashop.tests;
 
-import BaseConfiguration.BaseTest;
+import base.configuration.BaseTest;
+import com.prestashop.Account;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,7 +20,16 @@ public class CreateAnAccountTest extends BaseTest {
     @Test
     public void createGirlAccount() {
         logInStep.partToCreatingAnAccount();
-        createAnAccountStep.fillDataGirlAccount();
+        createAnAccountStep.fillDataGirlAccount(
+                Account.builder()
+                        .firstName("Nastya")
+                        .lastName("Shults")
+                        .password("223344")
+                        .day("25")
+                        .month("2")
+                        .year("2000")
+                        .build()
+        );
         createAnAccountPage.clickRegister();
         Assert.assertEquals(myAccountPage.getSuccessfulMessage(), "Your account has been created.");
     }
